@@ -2,7 +2,7 @@ package org.example.bankAccounts;
 
 import org.example.people.BankAccountOwner;
 
-public class BasicBankAccount {
+public class BaseBankAccount {
 
     private String uuid;
 
@@ -11,7 +11,7 @@ public class BasicBankAccount {
     private BankAccountOwner owner;
     double balance;
 
-    public BasicBankAccount(String uuid, String accountNumber, BankAccountOwner owner, double balance) {
+    public BaseBankAccount(String uuid, String accountNumber, BankAccountOwner owner, double balance) {
         this.uuid = uuid;
         this.accountNumber = accountNumber;
         this.owner = owner;
