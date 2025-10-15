@@ -25,4 +25,7 @@ public class BankAccountOwner {
         return lastName;
     }
 
+    public String getFullName() {
+        return firstName + " " + lastName;
+    }
 }

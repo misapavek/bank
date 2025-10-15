@@ -26,7 +26,11 @@ public class BankAccountOwnerJsonSerializationService implements Serialization {
           sb.append("}");
         */
 
-        return gson.toJson(bankAccountOwnerSerialization);
+        String json = gson.toJson(bankAccountOwnerSerialization);
+
+        System.out.println(json);
+
+        return json;
     }
 
     @Override

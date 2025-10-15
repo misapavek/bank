@@ -1,11 +1,9 @@
-package org.example.bankAccounts;
-
-import java.lang.classfile.constantpool.IntegerEntry;
+package org.example.bankAccounts.services;
 
 public class BankAccountNumberGenerator {
 
     public String generateNumber() {
-        int number = (int)(Math.random()*100);
+        int number = (int)(Math.random()*10000);
         return Integer.toString(number);
     }
 }

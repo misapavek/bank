@@ -1,5 +1,6 @@
 package org.example.bankAccounts;
 
+import org.example.bankAccounts.services.BankAccountNumberGenerator;
 import org.example.people.BankAccountOwner;
 
 public class BaseBankAccount {
@@ -10,6 +11,8 @@ public class BaseBankAccount {
 
     private BankAccountOwner owner;
     double balance;
+
+    private BankAccountNumberGenerator bankAccountNumberGenerator;
 
     public BaseBankAccount(String uuid, String accountNumber, BankAccountOwner owner, double balance) {
         this.uuid = uuid;
@@ -31,17 +34,10 @@ public class BaseBankAccount {
     public double getBalance() {
         return balance;
     }
-
-    public void AddBalance(int amount){
-        this.balance += amount;
+    public void setbalance(double balance) {
+        this.balance = balance;
     }
 
-    public void SubtractBalance(int amount){
-        double subtraction = this.balance - amount;
-        if (subtraction > 0){
-            this.balance -= amount;
-        }
-    }
 
 
 }
