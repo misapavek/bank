@@ -1,6 +1,7 @@
 package org.example.bankAccounts.factories;
 
 import org.example.bankAccounts.BankAccount;
+import org.example.bankAccounts.BankAccountWithPaymentCards;
 import org.example.bankAccounts.SavingBankAccount;
 import org.example.bankAccounts.StudentBankAccount;
 import org.example.bankAccounts.services.BankAccountNumberGenerator;
@@ -19,5 +20,9 @@ public class BankAccountFactory {
 
     public StudentBankAccount createStudentBankAccount(String uuid, BankAccountOwner bankAccountOwner,double balance ,String school){
         return new StudentBankAccount(uuid, generator.generateNumber(), bankAccountOwner, 0, school);
+    }
+
+    public BankAccountWithPaymentCards createBankAcountWithPaymentCards(String uuid, BankAccountOwner bankAccountOwner, double balance){
+        return new BankAccountWithPaymentCards(uuid,generator.generateNumber() , bankAccountOwner, balance);
     }
 }

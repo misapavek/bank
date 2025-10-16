@@ -1,5 +1,7 @@
 package org.example.bankAccounts.card;
 
+import org.example.people.BankAccountOwner;
+
 public class PaymentCard {
 
     private final String cardNumber;
@@ -10,9 +12,9 @@ public class PaymentCard {
 
     private final String expireYear;
 
-    private final String owner;
+    private final BankAccountOwner owner;
 
-    public PaymentCard(String cardNumber, String cvv, String expireMonth, String expireYear, String owner) {
+    public PaymentCard(String cardNumber, String cvv, String expireMonth, String expireYear, BankAccountOwner owner) {
         this.cardNumber = cardNumber;
         this.cvv = cvv;
         this.expireMonth = expireMonth;
@@ -36,7 +38,7 @@ public class PaymentCard {
         return expireYear;
     }
 
-    public String getOwner() {
+    public BankAccountOwner getOwner() {
         return owner;
     }
 }

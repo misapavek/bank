@@ -1,12 +1,14 @@
 package org.example.bankAccounts.card;
 
+import org.example.people.BankAccountOwner;
+
 public class PaymentCardFactory {
 
     PaymentCardNumberGenerator paymentCardNumberGenerator = new PaymentCardNumberGenerator();
     PaymentCardCvvGenerator paymentCardCvvGenerator = new PaymentCardCvvGenerator();
     PaymentCardExpireCalculator paymentCardExpireCalculator = new PaymentCardExpireCalculator();
 
-    public PaymentCard create(String owner) {
+    public PaymentCard create(BankAccountOwner owner) {
         String cardNumber = paymentCardNumberGenerator.generateCardNumber();
         String cvv = paymentCardCvvGenerator.generate();
         String expireMonth = paymentCardExpireCalculator.calculateMonthExpire();
