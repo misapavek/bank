@@ -1,6 +1,6 @@
 package org.example.bankAccounts;
 
-import org.example.bankAccounts.card.PaymentCard;
+import org.example.card.PaymentCard;
 import org.example.people.BankAccountOwner;
 import java.util.ArrayList;
 import java.util.List;

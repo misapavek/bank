@@ -1,16 +1,10 @@
 package org.example;
 
 import org.example.bankAccounts.BankAccountWithPaymentCards;
-import org.example.bankAccounts.BaseBankAccount;
-import org.example.bankAccounts.SavingBankAccount;
-import org.example.bankAccounts.StudentBankAccount;
-import org.example.bankAccounts.card.PaymentCard;
-import org.example.bankAccounts.card.PaymentCardFactory;
-import org.example.bankAccounts.card.services.PaymentCardService;
+import org.example.card.PaymentCard;
+import org.example.card.PaymentCardFactory;
+import org.example.card.services.PaymentCardService;
 import org.example.bankAccounts.factories.BankAccountFactory;
-import org.example.bankAccounts.services.BankAccountNumberGenerator;
-import org.example.bankAccounts.serialization.BankAccountOwnerJsonSerializationService;
-import org.example.bankAccounts.serialization.Serialization;
 import org.example.bankAccounts.services.BankAccountService;
 import org.example.people.BankAccountOwner;
 import org.example.people.factories.OwnerFactory;
@@ -36,7 +30,7 @@ public class Main {
         bankAccount.addPaymentCard(paymentCard2);
 
         System.out.println(owner.getUuid() + " " + owner.getFullName() + ": " + bankAccount.getAccountNumber() + " " + bankAccount.getBalance());
-        paymentCardService.makePayment(bankAccount, paymentCard, 100);
+        paymentCardService.makePayment(bankAccount, paymentCard, 499);
         System.out.println(bankAccount.getAccountNumber() + " " + bankAccount.getBalance());
         bankAccountService.addBalance(bankAccount, 100000);
         System.out.println(bankAccount.getAccountNumber() + " " + bankAccount.getBalance());

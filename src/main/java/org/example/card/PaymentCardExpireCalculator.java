@@ -1,4 +1,4 @@
-package org.example.bankAccounts.card;
+package org.example.card;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
