@@ -1,13 +1,14 @@
 package org.example.card.services;
 
 import org.example.bankAccounts.BankAccountWithPaymentCards;
+import org.example.bankAccounts.services.BankAccountService;
 import org.example.card.PaymentCard;
 import java.time.LocalDate;
 import java.util.logging.Logger;
 
 public class PaymentCardService {
 
-    private static final Logger logger = Logger.getLogger("CardServiceLog");
+    private static final Logger logger = Logger.getLogger(PaymentCardService.class.getName());
 
     public void makePayment(BankAccountWithPaymentCards bankAccountWithPaymentCards, PaymentCard paymentCard, double amount) {
 
