@@ -1,0 +1,44 @@
+package org.example.accounts.services;
+
+import com.google.inject.Inject;
+import com.google.inject.Singleton;
+import org.example.accounts.BaseBankAccount;
+import org.example.logger.Logger;
+
+@Singleton
+public class BankAccountDepositManipulationService {
+
+    @Inject
+    private Logger logger;
+
+    public void deposit(BaseBankAccount account, double amount) {
+        if (amount <= 0) {
+            throw new IllegalArgumentException("Deposit amount must be positive.");
+        }
+
+        logger.log(account.getUuid() + ": + " + amount);
+
+
+        if (amount > 10000) {
+            System.err.println("Amount to be deposited is greater than 10000.");
+        }
+
+
+        double newBalance = account.getBalance() + amount;
+        account.setbalance(newBalance);
+    }
+
+    public void withdraw(BaseBankAccount account, double amount) {
+        if (amount <= 0) {
+            throw new IllegalArgumentException("Withdrawal amount must be positive.");
+        }
+        if (account.getBalance() < amount) {
+            throw new IllegalStateException("Insufficient funds.");
+        }
+
+        logger.log(account.getUuid() + ": - " + amount);
+
+        double newBalance = account.getBalance() - amount;
+        account.setbalance(newBalance);
+    }
+}

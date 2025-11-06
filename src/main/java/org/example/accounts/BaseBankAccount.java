@@ -1,6 +1,6 @@
-package org.example.bankAccounts;
+package org.example.accounts;
 
-import org.example.bankAccounts.services.BankAccountNumberGenerator;
+import org.example.accounts.services.BankAccountNumberGenerator;
 import org.example.people.BankAccountOwner;
 
 public class BaseBankAccount {

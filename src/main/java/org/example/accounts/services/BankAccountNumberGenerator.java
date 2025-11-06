@@ -1,4 +1,4 @@
-package org.example.bankAccounts.services;
+package org.example.accounts.services;
 
 public class BankAccountNumberGenerator {
 

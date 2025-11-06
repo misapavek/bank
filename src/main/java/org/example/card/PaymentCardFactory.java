@@ -1,19 +1,31 @@
+
 package org.example.card;
 
-import org.example.people.BankAccountOwner;
+import com.google.inject.Inject;
+import com.google.inject.Singleton;
+import org.example.accounts.BaseBankAccount;
 
+import java.util.UUID;
+
+@Singleton
 public class PaymentCardFactory {
 
-    PaymentCardNumberGenerator paymentCardNumberGenerator = new PaymentCardNumberGenerator();
-    PaymentCardCvvGenerator paymentCardCvvGenerator = new PaymentCardCvvGenerator();
-    PaymentCardExpireCalculator paymentCardExpireCalculator = new PaymentCardExpireCalculator();
+    @Inject
+    private PaymentCardNumberGenerator paymentCardNumberGenerator;
 
-    public PaymentCard create(BankAccountOwner owner) {
-        String cardNumber = paymentCardNumberGenerator.generateCardNumber();
-        String cvv = paymentCardCvvGenerator.generate();
-        String expireMonth = paymentCardExpireCalculator.calculateMonthExpire();
-        String expireYear = paymentCardExpireCalculator.calculateYearExpire();
+    @Inject
+    private PaymentCardCvvGenerator paymentCardCvvGenerator;
 
-        return new PaymentCard(cardNumber, cvv, expireMonth, expireYear, owner);
+    @Inject
+    private PaymentCardExpireCalculator paymentCardExpirationCalculator;
+
+    public PaymentCard create(BaseBankAccount  baseBankAccount) {
+
+        String cardNUmber = this.paymentCardNumberGenerator.generateCardNumber();
+        String cvv = this.paymentCardCvvGenerator.generate();
+        String expireMonth = this.paymentCardExpirationCalculator.calculateMonthExpire();
+        String expireYear = this.paymentCardExpirationCalculator.calculateYearExpire();
+
+        return new PaymentCard( cardNUmber, cvv, expireMonth, expireYear, baseBankAccount);
     }
 }

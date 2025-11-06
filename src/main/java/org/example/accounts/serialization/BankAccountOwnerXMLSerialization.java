@@ -1,4 +1,4 @@
-package org.example.bankAccounts.serialization;
+package org.example.accounts.serialization;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import org.example.people.BankAccountOwner;
 

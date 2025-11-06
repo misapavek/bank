@@ -1,6 +1,6 @@
 package org.example.people.serialization;
 
-import org.example.bankAccounts.serialization.BankAccountOwnerSerialization;
+import org.example.accounts.serialization.BankAccountOwnerSerialization;
 import org.example.people.BankAccountOwner;
 
 public class BankAccountOwnerSerializeFactory {

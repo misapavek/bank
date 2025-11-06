@@ -1,4 +1,4 @@
-package org.example.bankAccounts.serialization;
+package org.example.accounts.serialization;
 
 import org.example.people.BankAccountOwner;
 

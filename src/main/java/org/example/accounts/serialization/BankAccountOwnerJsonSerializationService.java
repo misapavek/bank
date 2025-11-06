@@ -1,4 +1,4 @@
-package org.example.bankAccounts.serialization;
+package org.example.accounts.serialization;
 
 import com.google.gson.Gson;
 import org.example.people.BankAccountOwner;

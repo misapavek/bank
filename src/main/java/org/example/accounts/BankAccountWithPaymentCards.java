@@ -1,4 +1,4 @@
-package org.example.bankAccounts;
+package org.example.accounts;
 
 import org.example.card.PaymentCard;
 import org.example.people.BankAccountOwner;

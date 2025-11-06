@@ -1,8 +1,8 @@
 package org.example.serialization;
 
 import com.google.gson.Gson;
-import org.example.bankAccounts.serialization.BankAccountOwnerSerialization;
-import org.example.bankAccounts.serialization.BankAccountOwnerSerializationFactory;
+import org.example.accounts.serialization.BankAccountOwnerSerialization;
+import org.example.accounts.serialization.BankAccountOwnerSerializationFactory;
 import org.example.people.BankAccountOwner;
 import org.example.people.serialization.BankAccountOwnerSerialize;
 
